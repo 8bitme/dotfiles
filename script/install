@@ -10,9 +10,5 @@ cd "$(dirname $0)"/..
 echo "› brew bundle"
 brew bundle
 
-# Install oh-my-zsh manually
-echo "› installing oh-my-zsh"
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
