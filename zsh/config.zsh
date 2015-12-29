@@ -26,7 +26,8 @@ setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
-setopt IGNORE_EOF
+#Disabled so that I can ctrl-d to exit/logout
+#setopt IGNORE_EOF
 
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
@@ -46,3 +47,7 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
+
+
+#Hide the user@hostname in the prompt I know who I am ^ ^
+DEFAULT_USER=`whoami`
