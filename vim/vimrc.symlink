@@ -5,3 +5,7 @@ filetype indent plugin on
 
 " Turn on line numbers by default
 set number
+" Turn on the cursor line
+set cursorline
+" \c to then <ENTER> to toggle the cursor line
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
