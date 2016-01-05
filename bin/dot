@@ -17,5 +17,5 @@ echo "› brew update"
 brew update
 
 # Install software
-echo "› $ZSH/script/install"
+echo "› $ZSHDOT/script/install"
 $ZSHDOT/script/install
