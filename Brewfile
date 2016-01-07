@@ -33,6 +33,8 @@ cask 'bettertouchtool'
 cask 'firefox'
 cask 'google-chrome'
 cask 'handbrake'
+# A really nice calendar menu app
+cask 'itsycal'
 #cask 'intellij-idea'
 #cask 'seashore'
 #cask 'slack'
