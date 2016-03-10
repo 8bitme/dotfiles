@@ -6,7 +6,6 @@
 #echo "› sudo softwareupdate -i -a"
 #sudo softwareupdate -i -a
 
-echo "In os-x install" 
  if [ ! -d ~/Desktop/screenshots ]; then
 	echo "› creating a screenshots folder on the desktop"
 	mkdir ~/Desktop/Screenshots
