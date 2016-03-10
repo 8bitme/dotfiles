@@ -25,6 +25,7 @@ brew 'watch'
 brew 'wget'
 brew 'p7zip'
 brew 'zsh-syntax-highlighting'
+brew 'emacs'
 
 cask 'adium'
 cask 'alfred'
