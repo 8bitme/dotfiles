@@ -6,7 +6,7 @@ extract_packages_not_installed(){
 }
 
 run_npm() {
-local NPM_GLOBAL_PACKAGES="tldr spoof dark-mode pipeable-js jsome jshint cordova"
+local NPM_GLOBAL_PACKAGES="n tldr spoof dark-mode pipeable-js jsome jshint cordova ionic@beta"
 if hash npm 2>/dev/null; then
 	local packages_not_installed=$( { hash $NPM_GLOBAL_PACKAGES } 2>&1  )
 	extract_packages_not_installed packages_not_installed packages_to_install
