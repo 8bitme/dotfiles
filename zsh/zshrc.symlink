@@ -39,3 +39,6 @@ do
 done
 
 unset config_files
+
+export ANDROID_HOME=/Users/yairmark/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
