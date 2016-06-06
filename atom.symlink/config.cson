@@ -15,10 +15,12 @@
       "repositories"
       "tmp"
       "vendor"
+      ".DS_STORE"
+      "Thumbs.db"
     ]
     themes: [
-      "unity-ui"
-      "glacier-syntax"
+      "atom-dark-ui"
+      "atom-material-syntax-dark"
     ]
   editor:
     fontFamily: "Menlo"
@@ -28,6 +30,11 @@
     softWrapAtPreferredLineLength: true
   "go-plus":
     goPath: "/Users/holman/Code/go"
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  pigments: {}
   "release-notes":
     viewedVersion: "0.89.0"
   "spell-check":
@@ -36,5 +43,11 @@
       "source.gfm"
       "text.git-commit"
     ]
+  "terminal-plus":
+    core: {}
+    style: {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
