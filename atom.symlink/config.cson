@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "72513a2c-53d8-4e09-9bd4-5fd65fa2ee8e"
   "autocomplete-plus": {}
   core:
     disabledPackages: [
@@ -19,7 +22,7 @@
       "Thumbs.db"
     ]
     themes: [
-      "atom-dark-ui"
+      "atom-material-ui"
       "atom-material-syntax-dark"
     ]
   editor:
@@ -31,6 +34,7 @@
   "go-plus":
     goPath: "/Users/holman/Code/go"
   minimap:
+    autoToggle: false
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
