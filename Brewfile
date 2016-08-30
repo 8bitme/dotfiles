@@ -27,6 +27,8 @@ brew 'p7zip'
 brew 'zsh-syntax-highlighting'
 brew 'emacs'
 brew 'kdiff3'
+brew 'scala'
+brew 'sbt'
 
 cask 'adium'
 cask 'alfred'
