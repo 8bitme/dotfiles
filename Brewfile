@@ -29,6 +29,7 @@ brew 'emacs'
 brew 'kdiff3'
 brew 'scala'
 brew 'sbt'
+brew 'dos2unix'
 
 cask 'adium'
 cask 'alfred'
