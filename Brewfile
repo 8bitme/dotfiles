@@ -30,6 +30,7 @@ brew 'scala'
 brew 'sbt'
 brew 'dos2unix'
 brew 'colordiff'
+brew 'python'
 
 cask 'kdiff3'
 cask 'adium'
