@@ -1,0 +1,158 @@
+# Sample gitconfig
+#
+
+[hub]
+        protocol = https
+[user]
+	name = Yair
+        email = 
+[credential]
+        helper = osxkeychain
+[alias]
+        co = checkout
+        promote = !$ZSH/bin/git-promote
+        wtf     = !$ZSH/bin/git-wtf
+        rank-contributors = !$ZSH/bin/git-rank-contributors
+        count   = !git shortlog -sn
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = vim
+	autocrlf = input
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to suppress warning message
+        default = simple
+[alias]
+	# taken from http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+	# git ls
+	# 	this will show recent changes in short form
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	# git ll
+	# 	show more details about changes
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	# git lnc
+	# 	list with no colours
+	lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+	# git lds -10
+	# 	show commits on one line per commit with the date of the commit
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	# git ld -10
+	# 	show one commit per line with relative dates e.g. 10 hours ago -10 is -n so n can be any number
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	# git le
+	# 	default look for git log
+	le = log --oneline --decorate
+	
+	##### file specific aliases
+	# filelog filename
+	# fl filename
+	# 	this will show the diff of changes for this file
+	filelog = log -u
+	fl = log -u
+
+	###### Looking at recent commits
+	# dl
+	# 	Show files changed in last commit
+	dl = "!git ll -1"
+	
+	# dlc
+	#	Show a diff of the last commit
+	dlc = diff --cached HEAD^
+
+	# Show content of a commit given a revision hash
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	lc  = "!f() { git ll "$1"^.."$1"; }; f"
+	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+	##### Searching for things in files
+	# git f fileNameToSearchFor
+	# 	Search for the given file and path in the codebase
+	f = "!git ls-files | grep -i"
+	# git grep termToSearchFor
+	# git gr termToSearchFor
+	# 	Search the contents of the files in the entire codebase for the term to find
+	grep = grep -Ii
+	gr = grep -Ii
+
+	# git gra termToSearchFor
+	# 	Search for file contents from the root of the code base
+	gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+
+	##### Info/about queries
+	# git la
+	# 	List all the aliases
+	la = "!git config -l | grep alias | cut -c 7-"	
+
+	##### Ignoring specific files e.g. .iml if working with git ontop of an SVN project where the .iml has not been ignored and you do not want to add a .gitignore
+	# git assume fileName
+	# 	Ignore the given file for changes
+	assume = update-index --assume-unchanged
+	# git unassume fileName
+	# 	Unignore a file for changes i.e. start tracking changes in that file again
+	unassume = update-index --no-assume-unchanged
+	# git assumed
+	# 	Show all ignored files
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+	# git unassumeall
+	# 	Retrack all ignored files
+	unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+	# git assumeall
+	# 	Ignore all files
+	assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+
+	##### Working with tags
+	# git lasttag
+	# git lt
+	# 	Show the last tag
+	lasttag = describe --tags --abbrev=0
+	lt = describe --tags --abbrev=0
+	
+	##### Mergining aliases
+	ours = "!f() { git co --ours $@ && git add $@; }; f"
+	theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+
+	##### Basic shorthand shortcuts
+	cp = cherry-pick
+	st = status -s
+	cl = clone
+	ci = commit
+	co = checkout
+	br = branch 
+	diff = diff --word-diff
+	dc = diff --cached
+	
+	##### Reset shortcuts
+	r = reset
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+
+	##### Git-svn shortcuts
+	svnr = svn rebase
+	svnd = svn dcommit
+	svnl = svn log --oneline --show-commit
+
+	##### Stash shortcuts
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+	sp = stash pop
+	s  = stash
+	
