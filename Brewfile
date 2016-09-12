@@ -32,7 +32,6 @@ brew 'dos2unix'
 brew 'colordiff'
 brew 'python'
 
-cask 'kdiff3'
 cask 'adium'
 cask 'alfred'
 cask 'atom'
