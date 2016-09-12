@@ -30,6 +30,7 @@ brew 'kdiff3'
 brew 'scala'
 brew 'sbt'
 brew 'dos2unix'
+brew 'colordiff'
 
 cask 'adium'
 cask 'alfred'
