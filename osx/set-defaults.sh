@@ -25,6 +25,8 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+# In the finder title show the full path to where we currently are, may have to run a 'killall Finder' to get it to work while finder is running
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Run the screensaver if we're in the bottom-left hot corner.
 #TODO workout how to set this to the corners I prefer
