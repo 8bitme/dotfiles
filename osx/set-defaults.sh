@@ -42,3 +42,10 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Make scrollbars visible always
+defaults write -g AppleShowScrollBars -string Always
+# if you wanted to make them only visible when scrolling again then comment out the above and uncomment the below
+# defaults write -g AppleShowScrollBars -string WhenScrolling
+# App specific tweaking e.g. for terminal
+# defaults write com.apple.Terminal AppleShowScrollBars -string Always
