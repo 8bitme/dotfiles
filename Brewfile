@@ -2,7 +2,9 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
-tap 'caskroom/versions'
+tap 'caskroom/versions
+# The below is used for maven-delux (allows colorizing of maven)
+tap jcgay/jcgay'
 
 brew 'ack'
 brew 'coreutils'
@@ -31,6 +33,7 @@ brew 'sbt'
 brew 'dos2unix'
 brew 'colordiff'
 brew 'python'
+brew 'maven-deluxe'
 
 cask 'adium'
 cask 'alfred'
