@@ -57,3 +57,5 @@ cask 'spectacle'
 cask 'iterm2'
 cask 'menumeters'
 cask 'beyond-compare'
+#Another cool editor
+cask 'lighttable'
