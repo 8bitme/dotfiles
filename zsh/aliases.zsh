@@ -71,3 +71,6 @@ alias wget='wget -c'
 alias df='df -H'
 alias du='du -ch'
 
+## Seeing what is taking space
+alias spaceuse='du -hs * | gsort -h'
+
