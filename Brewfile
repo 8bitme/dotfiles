@@ -33,6 +33,7 @@ brew 'sbt'
 brew 'dos2unix'
 brew 'colordiff'
 brew 'python'
+brew 'fish'
 #brew 'maven-deluxe'
 
 cask 'adium'
