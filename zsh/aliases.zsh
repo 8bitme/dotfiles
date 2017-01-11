@@ -7,7 +7,8 @@ alias colorize="sed 's#WARN#\x1b[33m&#; s#ERROR#\x1b[31m&#; s#INFO#\x1b[32m&#'"
 
 # Most of the below are taken from http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
 #ls aliases
-alias ls='ls --color=auto'
+# Have to do the below as something else is aliasing ls to ls -k which is invalid and cannot workout what is doing this
+alias ls="ls"
 alias ll='ls -la'
 alias l.='ls -d .* --color=auto'
 
