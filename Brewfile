@@ -34,6 +34,7 @@ brew 'dos2unix'
 brew 'colordiff'
 brew 'python'
 brew 'fish'
+brew 'yarn'
 #brew 'maven-deluxe'
 
 cask 'adium'
