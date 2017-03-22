@@ -65,3 +65,4 @@ cask 'beyond-compare'
 #Another cool editor
 cask 'lighttable'
 cask 'fluid'
+cask 'aquamacs'
